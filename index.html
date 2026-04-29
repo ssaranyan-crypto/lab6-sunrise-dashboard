@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Sunset Dashboard</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 🌤 Dynamic Sky -->
+<div class="sky">
+    <img src="sun.png" class="moving-sun" id="movingSun">
+    <img src="weather.png" class="cloud">
+</div>
+
+<header class="header">
+    <img src="sun.png" class="sun-icon">
+    <h1>Sunrise & Sunset Dashboard</h1>
+    <img src="weather.png" class="weather-icon">
+</header>
+
+<main>
+
+    <section class="search-section">
+        <h2>Find Location</h2>
+
+        <select id="locationSelect">
+            <option value="">Select a City</option>
+            <option value="41.8781,-87.6298">Chicago</option>
+            <option value="40.7128,-74.0060">New York</option>
+            <option value="34.0522,-118.2437">Los Angeles</option>
+            <option value="51.5074,-0.1278">London</option>
+            <option value="48.8566,2.3522">Paris</option>
+            <option value="35.6895,139.6917">Tokyo</option>
+            <option value="28.6139,77.2090">Delhi</option>
+            <option value="19.0760,72.8777">Mumbai</option>
+            <option value="55.7558,37.6173">Moscow</option>
+            <option value="-33.8688,151.2093">Sydney</option>
+        </select>
+
+        <div>
+            <button onclick="getSelectedLocation()">Search</button>
+            <button onclick="getCurrentLocation()">Use Current Location</button>
+        </div>
+
+        <p id="errorMessage"></p>
+    </section>
+
+    <section class="results">
+        <div class="card">
+            <h3>🌞 Today</h3>
+            <p>Sunrise: <span id="todaySunrise">--</span></p>
+            <p>Sunset: <span id="todaySunset">--</span></p>
+            <p>Dawn: <span id="todayDawn">--</span></p>
+            <p>Dusk: <span id="todayDusk">--</span></p>
+            <p>Solar Noon: <span id="todayNoon">--</span></p>
+            <p>Day Length: <span id="todayLength">--</span></p>
+            <p>Timezone: <span id="todayTimezone">--</span></p>
+        </div>
+
+        <div class="card">
+            <h3>🌤 Tomorrow</h3>
+            <p>Sunrise: <span id="tomorrowSunrise">--</span></p>
+            <p>Sunset: <span id="tomorrowSunset">--</span></p>
+            <p>Dawn: <span id="tomorrowDawn">--</span></p>
+            <p>Dusk: <span id="tomorrowDusk">--</span></p>
+            <p>Solar Noon: <span id="tomorrowNoon">--</span></p>
+            <p>Day Length: <span id="tomorrowLength">--</span></p>
+            <p>Timezone: <span id="tomorrowTimezone">--</span></p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Data from https://sunrisesunset.io</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
