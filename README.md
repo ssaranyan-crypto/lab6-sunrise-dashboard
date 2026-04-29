@@ -61,7 +61,7 @@ lab6-sunrise-sunset-dashboard
 ### Option 2: Live Website
 
 👉 Open the deployed version:
-**[Add your GitHub Pages link here]**
+https://ssaranyan-crypto.github.io/lab6-sunrise-dashboard/
 
 ---
 
